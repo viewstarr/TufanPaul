@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul | Specialist Administrare Marketplace & E-Commerce</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                            dark: '#0f172a'
+                        },
+                        whatsapp: {
+                            DEFAULT: '#25D366',
+                            hover: '#1da851',
+                            dark: '#128C7E'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #0284c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-hero {
+            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 50%),
+                        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Brand -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-sky-500 text-white flex items-center justify-center font-bold text-xl shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        P
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold text-slate-900 tracking-tight block leading-none">PAUL</span>
+                        <span class="text-xs font-semibold text-brand-600 tracking-wider uppercase">E-Commerce Expert</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                    <a href="#platforme" class="hover:text-brand-600 transition-colors">Platforme</a>
+                    <a href="#servicii" class="hover:text-brand-600 transition-colors">Servicii</a>
+                    <a href="#calculator" class="hover:text-brand-600 transition-colors">Calculator Tarif</a>
+                    <a href="#contact" class="hover:text-brand-600 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="https://wa.me/40720192095?text=Salut%20Paul!%20Doresc%20mai%20multe%20detalii%20despre%20administrarea%20conturilor%20de%20marketplace." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2.5 bg-whatsapp hover:bg-whatsapp-hover text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-lg shadow-whatsapp/20 hover:shadow-whatsapp/30 transition-all hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Mesaj pe WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Deschide meniul">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#platforme" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Platforme</a>
+            <a href="#servicii" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Servicii</a>
+            <a href="#calculator" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Calculator Tarif</a>
+            <a href="#contact" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Contact</a>
+            <a href="https://wa.me/40720192095?text=Salut%20Paul!%20Doresc%20mai%20multe%20detalii%20despre%20administrarea%20conturilor%20de%20marketplace." 
+               target="_blank" 
+               class="flex items-center justify-center gap-2 w-full bg-whatsapp text-white font-semibold py-3 rounded-xl shadow-md">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Trimite Mesaj pe WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden gradient-hero">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center space-y-6">
+                <!-- Trust Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs sm:text-sm font-semibold tracking-wide uppercase shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    7+ Ani Experiență în E-Commerce & Marketplace-uri
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+                    Crește-ți vânzările pe <span class="gradient-text">Marketplace</span> fără bătăi de cap
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-lg sm:text-xl text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
+                    Preluăm administrarea completă a magazinului tău pe eMAG Marketplace, Trendyol, Doraly și alte platforme majore. Te ajutăm să economisești timp și să maximizezi profitul.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/40720192095?text=Salut%20Paul!%20Vreau%20o%20discu%C8%9Bie%20despre%20administrarea%20contului%20meu%20de%20marketplace." 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-whatsapp hover:bg-whatsapp-hover text-white font-bold text-base px-8 py-4 rounded-2xl shadow-xl shadow-whatsapp/25 hover:shadow-whatsapp/35 transition-all hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Discută pe WhatsApp</span>
+                    </a>
+                    <a href="#servicii" 
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-semibold text-base px-8 py-4 rounded-2xl shadow-sm hover:shadow transition-all">
+                        <span>Vezi Serviciile</span>
+                        <i class="fa-solid fa-arrow-down text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Quick highlights -->
+                <div class="pt-8 grid grid-cols-2 md:grid-cols-3 gap-4 border-t border-slate-200/80 max-w-2xl mx-auto text-left">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-medium">Reacție rapidă</p>
+                            <p class="text-sm font-bold text-slate-900">Asistență dedicată</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-medium">Tarif transparent</p>
+                            <p class="text-sm font-bold text-slate-900">350 Lei / Lună / Cont</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 col-span-2 md:col-span-1">
+                        <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-medium">Fără termen lung</p>
+                            <p class="text-sm font-bold text-slate-900">Plată bilunară / lunară</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PLATFORME GESTIONATE SECTION -->
+    <section id="platforme" class="py-16 bg-white border-y border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Acoperire Extinsă</h2>
+                <p class="text-3xl font-extrabold text-slate-900 tracking-tight">Platforme & Marketplace-uri Asistate</p>
+                <p class="text-slate-600 mt-2">Experiență directă în administrarea și optimizarea produselor pe canale de top.</p>
+            </div>
+
+            <!-- Platform Cards Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <!-- eMAG -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-brand-500/40 hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-red-100 text-red-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900">eMAG</h3>
+                    <p class="text-xs text-slate-500 mt-1">Marketplace No.1</p>
+                </div>
+
+                <!-- Trendyol -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-amber-500/40 hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900">Trendyol</h3>
+                    <p class="text-xs text-slate-500 mt-1">Design & Listare</p>
+                </div>
+
+                <!-- eLaReduceri -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-sky-500/40 hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900">eLaReduceri</h3>
+                    <p class="text-xs text-slate-500 mt-1">Campanii & Oferte</p>
+                </div>
+
+                <!-- Infinity -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-purple-500/40 hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-infinity"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900">Infinity</h3>
+                    <p class="text-xs text-slate-500 mt-1">Management Cont</p>
+                </div>
+
+                <!-- Doraly -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-emerald-500/40 hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900">Doraly</h3>
+                    <p class="text-xs text-slate-500 mt-1">B2B & B2C Marketplace</p>
+                </div>
+
+                <!-- Magazine Proprii -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-indigo-500/40 hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl font-bold group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900">Site-uri Proprii</h3>
+                    <p class="text-xs text-slate-500 mt-1">Gomag / Woocomerce</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICII INCLUSE SECTION -->
+    <section id="servicii" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">Ce includ serviciile mele</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Administrare completă pas cu pas</p>
+                <p class="text-slate-600 mt-3">Toate uneltele și operațiunile de care ai nevoie pentru ca magazinul tău online să funcționeze impecabil și să genereze vânzări.</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. Listare produse -->
+                <div class="glass-card p-8 rounded-3xl hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Listare și Optimizare Produse</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Adăugare de produse noi cu titluri SEO relevante, descrieri clare și atractive, atribuire corectă a categoriilor și documentare tehnică exactă.
+                    </p>
+                </div>
+
+                <!-- 2. Campanii & Ads -->
+                <div class="glass-card p-8 rounded-3xl hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Campanii Promoționale & Ads</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Configurare campanii de preț, acordare de cupoane, oferire de cadouri/Gift, pachete Promo și gestionarea eficientă a reclamelor platite (ex: eMAG Ads).
+                    </p>
+                </div>
+
+                <!-- 3. Stocuri & Prețuri -->
+                <div class="glass-card p-8 rounded-3xl hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-rotate text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Actualizare Stocuri & Prețuri</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Monitorizarea constantă a stocurilor disponibile pentru a evita anulările de comenzi și ajustarea rapidă a prețurilor în funcție de evoluția pieței.
+                    </p>
+                </div>
+
+                <!-- 4. Design Magazin -->
+                <div class="glass-card p-8 rounded-3xl hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Design Magazin (*Trendyol)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Aranjarea estetică a paginii oficiale de brand pe Trendyol și alte platforme, creare de bannere vizuale și organizarea categoriilor pentru conversii maxime.
+                    </p>
+                </div>
+
+                <!-- 5. Calcule Rentabilitate -->
+                <div class="glass-card p-8 rounded-3xl hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Calcule de Rentabilitate</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Calcularea atentă a comisioanelor fiecărei platforme, a costurilor de livrare și a marjelor nete de profit pentru ca fiecare produs vândut să fie profitabil.
+                    </p>
+                </div>
+
+                <!-- 6. Reclamații & Suport -->
+                <div class="glass-card p-8 rounded-3xl hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Răspuns la Reclamații</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Gestionarea promptă și profesionistă a mesajelor de la clienți și a tichetelor de reclamație pentru păstrarea unui rating excelent al magazinului.
+                    </p>
+                </div>
+
+                <!-- 7. Statistici & Rapoarte -->
+                <div class="glass-card p-8 rounded-3xl hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Statistici & Rapoarte Vânzări</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Furnizarea de rapoarte periodice clare privind volumul vânzărilor, cele mai căutate produse și identificarea oportunităților de creștere.
+                    </p>
+                </div>
+
+                <!-- 8. Idei Strategice de Dezvoltare -->
+                <div class="glass-card p-8 rounded-3xl hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Idei de Dezvoltare</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Recomandări proactive pentru extinderea gamei de produse, lansarea pe canale noi de vânzare și optimizarea stocurilor existente.
+                    </p>
+                </div>
+
+                <!-- 9. Monitorizare Concurență -->
+                <div class="glass-card p-8 rounded-3xl hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Monitorizarea Concurenței</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Urmărirea mișcărilor concurenților principali pe platforme (prețuri, stocuri, promoții) pentru a ajusta rapid strategiile și a păstra avantajul competitiv.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR TARIF INTERACTIV & CONDIȚII -->
+    <section id="calculator" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Background Glows -->
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-emerald-600/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Stânga: Detalii & Condiții -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold uppercase tracking-wider">
+                        Tarife Transparente
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+                        Calcul simplu: <span class="text-brand-400">350 Lei / Lună</span> per cont
+                    </h2>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        Plătești doar pentru platformele pe care le folosești efectiv. Fără costuri ascunse și fără comisioane procentuale din vânzările tale.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Plată Flexibilă</h4>
+                                <p class="text-xs text-slate-400 mt-0.5">Plata se poate efectua la 2 săptămâni sau lunar, prin cont bancar sau altă metodă convenită de comun acord.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+                            <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-shield-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Fără Contracte Rigide</h4>
+                                <p class="text-xs text-slate-400 mt-0.5">Fără perioadă contractuală minimă obligatorie. Colaborăm pe bază de rezultate și încredere reciprocă.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dreapta: Calculator Interactiv -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-800/90 border border-slate-700 p-6 sm:p-8 rounded-3xl shadow-2xl backdrop-blur-xl">
+                        <div class="flex items-center justify-between pb-6 border-b border-slate-700/80 mb-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Calculator Tarif lunar</h3>
+                                <p class="text-xs text-slate-400">Bifează platformele pe care dorești administrarea</p>
+                            </div>
+                            <span class="px-3 py-1 rounded-lg bg-brand-500/20 text-brand-300 font-mono text-xs font-bold">
+                                350 LEI / CONT
+                            </span>
+                        </div>
+
+                        <!-- Checkbox-uri Platforme -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8" id="platforms-container">
+                            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-700 hover:border-brand-500/50 cursor-pointer transition-all select-none">
+                                <input type="checkbox" value="eMAG Marketplace" checked class="platform-checkbox w-5 h-5 rounded text-brand-600 focus:ring-brand-500 bg-slate-800 border-slate-600">
+                                <span class="text-sm font-semibold text-slate-200">eMAG Marketplace</span>
+                            </label>
+
+                            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-700 hover:border-brand-500/50 cursor-pointer transition-all select-none">
+                                <input type="checkbox" value="Trendyol" checked class="platform-checkbox w-5 h-5 rounded text-brand-600 focus:ring-brand-500 bg-slate-800 border-slate-600">
+                                <span class="text-sm font-semibold text-slate-200">Trendyol</span>
+                            </label>
+
+                            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-700 hover:border-brand-500/50 cursor-pointer transition-all select-none">
+                                <input type="checkbox" value="eLaReduceri" class="platform-checkbox w-5 h-5 rounded text-brand-600 focus:ring-brand-500 bg-slate-800 border-slate-600">
+                                <span class="text-sm font-semibold text-slate-200">eLaReduceri</span>
+                            </label>
+
+                            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-700 hover:border-brand-500/50 cursor-pointer transition-all select-none">
+                                <input type="checkbox" value="Infinity" class="platform-checkbox w-5 h-5 rounded text-brand-600 focus:ring-brand-500 bg-slate-800 border-slate-600">
+                                <span class="text-sm font-semibold text-slate-200">Infinity</span>
+                            </label>
+
+                            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-700 hover:border-brand-500/50 cursor-pointer transition-all select-none">
+                                <input type="checkbox" value="Doraly" class="platform-checkbox w-5 h-5 rounded text-brand-600 focus:ring-brand-500 bg-slate-800 border-slate-600">
+                                <span class="text-sm font-semibold text-slate-200">Doraly</span>
+                            </label>
+
+                            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-700 hover:border-brand-500/50 cursor-pointer transition-all select-none">
+                                <input type="checkbox" value="Magazin Propriu" class="platform-checkbox w-5 h-5 rounded text-brand-600 focus:ring-brand-500 bg-slate-800 border-slate-600">
+                                <span class="text-sm font-semibold text-slate-200">Magazin Propriu</span>
+                            </label>
+                        </div>
+
+                        <!-- Result Display Box -->
+                        <div class="bg-slate-900 p-6 rounded-2xl border border-slate-700/80 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div>
+                                <p class="text-xs text-slate-400">Total estimat (<span id="count-display" class="font-bold text-white">2</span> conturi selectate):</p>
+                                <p class="text-xs text-slate-400 mt-1" id="selected-list-display">eMAG Marketplace, Trendyol</p>
+                            </div>
+                            <div class="text-right shrink-0">
+                                <span id="total-price" class="text-3xl sm:text-4xl font-extrabold text-emerald-400 font-mono">700</span>
+                                <span class="text-lg font-bold text-slate-300 ml-1">LEI / lună</span>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic WhatsApp CTA Button -->
+                        <a id="whatsapp-calc-btn" 
+                           href="#" 
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="flex items-center justify-center gap-3 w-full bg-whatsapp hover:bg-whatsapp-hover text-white font-bold py-4 rounded-xl shadow-lg shadow-whatsapp/20 transition-all hover:scale-[1.01]">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span class="text-base">Trimite selecția pe WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER SECTION -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto bg-slate-50 border border-slate-200/80 rounded-3xl p-8 sm:p-12 shadow-sm text-center relative overflow-hidden">
+                
+                <div class="w-16 h-16 rounded-2xl bg-whatsapp/10 text-whatsapp mx-auto flex items-center justify-center text-3xl mb-6">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Hai să discutăm despre magazinul tău</h2>
+                
+                <p class="text-slate-600 mt-3 max-w-xl mx-auto text-base">
+                    Prefer comunicarea rapidă și eficientă. Trimite-mi un mesaj direct pe WhatsApp sau e-mail și îți răspund în cel mai scurt timp!
+                </p>
+
+                <!-- Phone / WhatsApp Box -->
+                <div class="mt-8 inline-flex flex-col sm:flex-row items-center gap-4 bg-white border border-slate-200 p-3 sm:p-4 rounded-2xl shadow-sm">
+                    <div class="flex items-center gap-3 px-3">
+                        <i class="fa-solid fa-mobile-screen text-slate-400 text-xl"></i>
+                        <span class="text-xl font-bold text-slate-900 tracking-wide font-mono">0720 192 095</span>
+                    </div>
+
+                    <div class="flex items-center gap-2 w-full sm:w-auto">
+                        <button onclick="copyPhone()" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-4 py-2.5 rounded-xl text-sm transition-colors">
+                            <i class="fa-regular fa-copy"></i>
+                            <span id="copy-text">Copiază numărul</span>
+                        </button>
+                        
+                        <a href="https://wa.me/40720192095?text=Salut%20Paul!%20Vreau%20s%C4%83%20discut%C4%83m%20despre%20o%20colaborare." 
+                           target="_blank" 
+                           class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-whatsapp hover:bg-whatsapp-hover text-white font-semibold px-5 py-2.5 rounded-xl text-sm shadow-sm transition-colors">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Scrie-mi acum</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Toast feedback message -->
+                <div id="toast" class="hidden mt-4 inline-block px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold shadow-lg">
+                    <i class="fa-solid fa-check text-emerald-400 mr-2"></i>Numărul a fost copiat în clipboard!
+                </div>
+
+            </div>
+
+            <!-- Simple Footer -->
+            <div class="mt-16 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© <span id="year">2026</span> Paul E-Commerce Management. Toate drepturile rezervate.</p>
+                <p>Specialist Administrare eMAG Marketplace, Trendyol & Magazine Online</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Set current year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Rate Calculator Logic
+        const pricePerAccount = 350;
+        const checkboxes = document.querySelectorAll('.platform-checkbox');
+        const countDisplay = document.getElementById('count-display');
+        const listDisplay = document.getElementById('selected-list-display');
+        const totalPriceDisplay = document.getElementById('total-price');
+        const whatsappCalcBtn = document.getElementById('whatsapp-calc-btn');
+
+        function updateCalculator() {
+            const selected = [];
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    selected.push(cb.value);
+                }
+            });
+
+            const count = selected.length;
+            const total = count * pricePerAccount;
+
+            countDisplay.textContent = count;
+            totalPriceDisplay.textContent = total;
+
+            if (count > 0) {
+                listDisplay.textContent = selected.join(', ');
+            } else {
+                listDisplay.textContent = 'Nicio platformă selectată';
+            }
+
+            // Generate customized WhatsApp URL
+            const platformText = count > 0 ? selected.join(' + ') : 'Nicio platformă';
+            const message = `Salut Paul! Am folosit calculatorul de pe site și aș dori o ofertă pentru ${count} cont(uri): ${platformText}. Preț calculat: ${total} Lei/lună.`;
+            const encodedMessage = encodeURIComponent(message);
+            whatsappCalcBtn.href = `https://wa.me/40720192095?text=${encodedMessage}`;
+        }
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', updateCalculator);
+        });
+
+        // Initialize calculator on page load
+        updateCalculator();
+
+        // Copy Phone Number to Clipboard
+        function copyPhone() {
+            const phone = "0720192095";
+            
+            // Clipboard fallback
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(phone);
+            } else {
+                const textArea = document.createElement("textarea");
+                textArea.value = phone;
+                textArea.style.position = "fixed";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                } catch (err) {
+                    console.error('Eroare copiere', err);
+                }
+                document.body.removeChild(textArea);
+            }
+
+            // Show Toast
+            const toast = document.getElementById('toast');
+            const copyText = document.getElementById('copy-text');
+            
+            copyText.textContent = "Copiat!";
+            toast.classList.remove('hidden');
+
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                copyText.textContent = "Copiază numărul";
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
